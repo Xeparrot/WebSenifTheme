@@ -1,0 +1,15 @@
+{
+    "name": "WebSenifTheme",
+    "alias": "webseniftheme",
+    "description": "",
+    "type": "theme",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\WebSenifTheme\\Providers\\WebSenifThemeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": [],
+    "module_type": "theme"
+}

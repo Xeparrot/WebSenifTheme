@@ -1,0 +1,30 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "devDependencies": {
+    "axios": "^0.21.4",
+    "bootstrap": "^5.2.0",
+    "dotenv": "^10.0.0",
+    "dotenv-expand": "^5.1.0",
+    "jquery": "^3.6.0",
+    "laravel-mix": "^6.0.31",
+    "laravel-mix-merge-manifest": "^2.0.0",
+    "lodash": "^4.17.21",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.3.7"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.5",
+    "sass": "1.32",
+    "sass-loader": "^13.0.2",
+    "wowjs": "^1.1.3"
+  }
+}
