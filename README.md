@@ -1,0 +1,2 @@
+# WebSenifTheme
+XeParrot Theme Project
