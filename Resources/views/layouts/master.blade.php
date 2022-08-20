@@ -7,7 +7,8 @@
         <title>Module WebSenifTheme</title>
 
        {{-- Laravel Mix - CSS File --}}
-        <link rel="stylesheet" href="{{ mix('css/webseniftheme.css') }}">
+        <link rel="stylesheet" href="{{url('css/frontend.css')}}">
+        <link rel="stylesheet" href="{{url('css/theme.css')}}">
 
         @include('webseniftheme::frontend.includes.navbar')
 
@@ -16,6 +17,6 @@
         @yield('content')
 
         {{-- Laravel Mix - JS File --}}
-         <script src="{{ mix('js/webseniftheme.js') }}"></script>
+         <script src="{{url('css/theme.js')}}"></script>
     </body>
 </html>

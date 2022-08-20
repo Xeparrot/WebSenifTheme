@@ -8,21 +8,25 @@
 
         <div class="navbar-collapse collapse" id="navbarContent">
             <ul class="navbar-nav ml-lg-4 pt-3 pt-lg-0">
-                <li class="nav-item active">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="services.html" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="blog.html" class="nav-link">News</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
+
+                @foreach(Module::all() as $moduleItem)
+                    {!!  Menu::render($moduleItem->getName().'FrontendMenu','web_senif_menu_style') !!}
+                @endforeach
+                {{--<li class="nav-item active">--}}
+                    {{--<a href="index.html" class="nav-link">Home</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                    {{--<a href="about.html" class="nav-link">About</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                    {{--<a href="services.html" class="nav-link">Services</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                    {{--<a href="blog.html" class="nav-link">News</a>--}}
+                {{--</li>--}}
+                {{--<li class="nav-item">--}}
+                    {{--<a href="contact.html" class="nav-link">Contact</a>--}}
+                {{--</li>--}}
             </ul>
 
             <div class="ml-auto">

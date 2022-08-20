@@ -4,6 +4,7 @@ namespace Modules\WebSenifTheme\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Modules\WebSenifTheme\Entities\MenuStyle;
 
 class WebSenifThemeServiceProvider extends ServiceProvider
 {
@@ -24,6 +25,8 @@ class WebSenifThemeServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        defineMenuStyle(MenuStyle::class,'web_senif_menu_style',$this->moduleName);
+
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();

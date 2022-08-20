@@ -15,6 +15,10 @@ class WebSenifThemeController extends Controller
     public function index()
     {
 
+
+        $oonfigDetail = config('menus.styles');
+
+        dd($oonfigDetail);
         return view('webseniftheme::index');
     }
 

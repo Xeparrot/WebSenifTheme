@@ -9,3 +9,8 @@ Menu::create('WebSenifTheme', function($menu) {
         'icon'=> 'c-sidebar-nav-icon cil-book'
     ]);
 });
+
+
+
+
+
