@@ -41,7 +41,7 @@ class WebSenifThemeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
@@ -175,7 +175,6 @@ class WebSenifThemeController extends Controller
             ]
         );
 
-
         $settingPageGenerator->addController(
             'section_block1_title',
             false,
@@ -185,18 +184,15 @@ class WebSenifThemeController extends Controller
             'textarea',
             '');
 
-
-
-
-
-
         $settingPageGenerator->renderControllers();
         $category = $settingPageGenerator->getContent();
 
         return view($settingPageGenerator->renderPage(),[
             'formData' => $category,
-            'formURL' => ''
+            'formURL' => route('store_settings')
         ]);
     }
+
+
 
 }

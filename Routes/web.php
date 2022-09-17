@@ -13,6 +13,7 @@
 
 Route::prefix('webseniftheme')->group(function() {
     Route::get('/', 'WebSenifThemeController@index');
+    Route::post('/store-setting', 'WebSenifThemeController@store')->name('store_settings');
 });
 
 Route::get('admin/homepage-setting','WebSenifThemeController@homepage_settings')->name('homepage_settings');
