@@ -15,4 +15,6 @@ Route::prefix('webseniftheme')->group(function() {
     Route::get('/', 'WebSenifThemeController@index');
 });
 
+Route::get('admin/homepage-setting','WebSenifThemeController@homepage_settings')->name('homepage_settings');
+
 includeRouteFiles(Module::getPath().'/WebSenifTheme/Menus');
