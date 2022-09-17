@@ -6,6 +6,9 @@ use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Services\SettingPageGeneratorBackend;
+use Modules\WebSenifTheme\Entities\WebSenifThemeSettings;
+use Modules\WebSenifTheme\Http\Services\ThemeSettingService;
+
 class WebSenifThemeController extends Controller
 {
     /**
@@ -41,7 +44,13 @@ class WebSenifThemeController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $requestData =  $request->all();
+        unset($requestData['_token']);
+
+        foreach ($requestData as $key => $requestItem)
+        {
+            ThemeSettingService::updateSenifThemeSettings($key,$requestItem);
+        }
     }
 
     /**

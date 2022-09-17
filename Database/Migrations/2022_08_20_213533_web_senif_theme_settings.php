@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('web_senif_theme_settings', function (Blueprint $table) {
             $table->string('id')->index();
             $table->string('key');
-            $table->string('value');
+            $table->string('value')->nullable();
             $table->timestamp('created_at')->nullable();
         });
     }
