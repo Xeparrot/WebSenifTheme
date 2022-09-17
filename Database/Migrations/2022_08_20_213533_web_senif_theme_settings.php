@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('web_senif_theme_settings', function (Blueprint $table) {
-            $table->string('id')->index();
+            $table->bigIncrements('id');
             $table->string('key');
             $table->string('value')->nullable();
             $table->timestamp('created_at')->nullable();
