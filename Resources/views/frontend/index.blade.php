@@ -6,10 +6,10 @@
     <div class="container h-100">
         <div class="row align-items-center h-100">
             <div class="col-lg-6 py-3 wow fadeInUp">
-                <h1 class="mb-4">Great Companies are built on great Products</h1>
-                <p class="text-lg mb-5">Ignite the most powerfull growth engine you have ever built for your company</p>
+                <h1 class="mb-4">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_title')}}</h1>
+                <p class="text-lg mb-5">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_content')}}</p>
 
-                <a href="#" class="btn btn-outline border text-secondary">More Info</a>
+                <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_link')}}" class="btn btn-outline border text-secondary">More Info</a>
                 <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
             </div>
             <div class="col-lg-6 py-3 wow zoomIn">
@@ -32,8 +32,8 @@
                             <img src="../assets/img/icon_pattern.svg" alt="">
                         </div>
                         <div>
-                            <h5>Provide financial advice by our advisor</h5>
-                            <p>Copywrite, blogpublic realations content translation.</p>
+                            <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_title')}}</h5>
+                            <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_content')}}</p>
                         </div>
                     </div>
                 </div>
@@ -44,8 +44,8 @@
                             <img src="../assets/img/icon_pattern.svg" alt="">
                         </div>
                         <div>
-                            <h5>Complete solutions for global organisations</h5>
-                            <p>Copywrite, blogpublic realations content translation.</p>
+                            <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_title')}}</h5>
+                            <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_content')}}</p>
                         </div>
                     </div>
                 </div>
@@ -56,8 +56,8 @@
                             <img src="../assets/img/icon_pattern.svg" alt="">
                         </div>
                         <div>
-                            <h5>Provide financial advice by our advisor</h5>
-                            <p>Copywrite, blogpublic realations content translation.</p>
+                            <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_title')}}</h5>
+                            <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_title')}}</p>
                         </div>
                     </div>
                 </div>

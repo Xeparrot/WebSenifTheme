@@ -20,8 +20,6 @@ class WebSenifThemeController extends Controller
 
 
         $oonfigDetail = config('menus.styles');
-
-        dd($oonfigDetail);
         return view('webseniftheme::index');
     }
 
@@ -51,6 +49,7 @@ class WebSenifThemeController extends Controller
         {
             ThemeSettingService::updateSenifThemeSettings($key,$requestItem);
         }
+        return back();
     }
 
     /**
@@ -99,6 +98,7 @@ class WebSenifThemeController extends Controller
     {
         $settingPageGenerator = new SettingPageGeneratorBackend('WebSenif Theme Settings','views','https://hellocom.com');
 
+
         $settingPageGenerator->addController(
             'logo',
             true,
@@ -106,7 +106,7 @@ class WebSenifThemeController extends Controller
             'Home page theme logo',
             'General',
             'file',
-            'hello');
+            ThemeSettingService::getSenifThemeSetting('logo'));
 
         $settingPageGenerator->addController(
             'hero_title',
@@ -115,7 +115,7 @@ class WebSenifThemeController extends Controller
             'You can change hero title',
             'Hero Section',
             'textarea',
-            'hello');
+            ThemeSettingService::getSenifThemeSetting('hero_title'));
 
         $settingPageGenerator->addController(
             'hero_content',
@@ -124,7 +124,7 @@ class WebSenifThemeController extends Controller
             'You can add hero content on hero page section',
             'Hero Section',
             'textarea',
-            'hello');
+            ThemeSettingService::getSenifThemeSetting('hero_content'));
 
         $settingPageGenerator->addController(
             'hero_image',
@@ -133,7 +133,7 @@ class WebSenifThemeController extends Controller
             'Hero image left side image',
             'Hero Section',
             'file',
-            '');
+            ThemeSettingService::getSenifThemeSetting('hero_image'));
 
         $settingPageGenerator->addController(
             'hero_link',
@@ -142,7 +142,7 @@ class WebSenifThemeController extends Controller
             'Hero image left side image',
             'Hero Section',
             'text',
-            '');
+            ThemeSettingService::getSenifThemeSetting('hero_link'));
 
         $settingPageGenerator->addController(
           'slider_status',
@@ -151,7 +151,7 @@ class WebSenifThemeController extends Controller
             'You can enabled/disabled slider on home page',
             'General',
             'select',
-                null,[
+            ThemeSettingService::getSenifThemeSetting('slider_status'),[
                     [
                         'name' => 'Enabled',
                         'value' => 'Enabled',
@@ -171,7 +171,7 @@ class WebSenifThemeController extends Controller
             'Enabled/Disabled hero section',
             'General',
             'select',
-            null,[
+            ThemeSettingService::getSenifThemeSetting('hero_section'),[
                 [
                     'name' => 'Enabled',
                     'value' => 'Enabled',
@@ -191,7 +191,59 @@ class WebSenifThemeController extends Controller
             'Hero image left side image',
             'Service Sections Blocks',
             'textarea',
-            '');
+            ThemeSettingService::getSenifThemeSetting('section_block1_title'));
+
+
+        $settingPageGenerator->addController(
+            'section_block1_content',
+            false,
+            'Section 1 Content',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('section_block2_content'));
+
+
+
+        $settingPageGenerator->addController(
+            'section_block2_title',
+            false,
+            'Section 2 Title',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('section_block2_title'));
+
+
+        $settingPageGenerator->addController(
+            'section_block2_content',
+            false,
+            'Section 2 Content',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('section_block2_content'));
+
+
+        $settingPageGenerator->addController(
+            'section_block3_title',
+            false,
+            'Section 3 Title',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('section_block3_title'));
+
+
+        $settingPageGenerator->addController(
+            'section_block3_content',
+            false,
+            'Section 3 Content',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('section_block3_content'));
+
 
         $settingPageGenerator->renderControllers();
         $category = $settingPageGenerator->getContent();

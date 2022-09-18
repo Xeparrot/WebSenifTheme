@@ -11,6 +11,14 @@ class ThemeSettingService
    public static function getSenifThemeSetting($key)
    {
 
+       $getSettings = WebSenifThemeSettings::where('key',$key)->first();
+
+       if($getSettings)
+       {
+           return $getSettings->value;
+       }else{
+           return null;
+       }
    }
 
    public static function updateSenifThemeSettings($key,$value)
