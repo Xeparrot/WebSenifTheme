@@ -203,6 +203,15 @@ class WebSenifThemeController extends Controller
             'textarea',
             ThemeSettingService::getSenifThemeSetting('section_block2_content'));
 
+        $settingPageGenerator->addController(
+            'section_block1_image',
+            false,
+            'Section Block 1 Image',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('section_block1_image'));
+
 
 
         $settingPageGenerator->addController(
@@ -224,6 +233,15 @@ class WebSenifThemeController extends Controller
             'textarea',
             ThemeSettingService::getSenifThemeSetting('section_block2_content'));
 
+        $settingPageGenerator->addController(
+            'section_block2_image',
+            false,
+            'Section Block 2 Image',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('section_block2_image'));
+
 
         $settingPageGenerator->addController(
             'section_block3_title',
@@ -243,6 +261,15 @@ class WebSenifThemeController extends Controller
             'Service Sections Blocks',
             'textarea',
             ThemeSettingService::getSenifThemeSetting('section_block3_content'));
+
+        $settingPageGenerator->addController(
+            'section_block3_image',
+            false,
+            'Section Block 3 Image',
+            'Hero image left side image',
+            'Service Sections Blocks',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('section_block3_image'));
 
 
         $settingPageGenerator->renderControllers();
