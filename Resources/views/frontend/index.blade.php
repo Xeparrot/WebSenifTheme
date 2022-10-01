@@ -2,24 +2,26 @@
 
 @section('content')
 
-<div class="page-banner home-banner">
-    <div class="container h-100">
-        <div class="row align-items-center h-100">
-            <div class="col-lg-6 py-3 wow fadeInUp">
-                <h1 class="mb-4">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_title')}}</h1>
-                <p class="text-lg mb-5">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_content')}}</p>
+@if(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_section') == 'Enabled')
+    <div class="page-banner home-banner">
+        <div class="container h-100">
+            <div class="row align-items-center h-100">
+                <div class="col-lg-6 py-3 wow fadeInUp">
+                    <h1 class="mb-4">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_title')}}</h1>
+                    <p class="text-lg mb-5">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_content')}}</p>
 
-                <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_link')}}" class="btn btn-outline border text-secondary">More Info</a>
-                <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
-            </div>
-            <div class="col-lg-6 py-3 wow zoomIn">
-                <div class="img-place">
-                    <img src="../assets/img/bg_image_1.png" alt="">
+                    <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_link')}}" class="btn btn-outline border text-secondary">More Info</a>
+                    <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
+                </div>
+                <div class="col-lg-6 py-3 wow zoomIn">
+                    <div class="img-place">
+                        <img src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('logo'))}}" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+@endif
 
 
 <main>
