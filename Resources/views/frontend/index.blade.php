@@ -31,7 +31,7 @@
                 <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
                     <div class="d-flex flex-row">
                         <div class="img-fluid mr-3">
-                            <img src="../assets/img/icon_pattern.svg" alt="">
+                            <img style="height: 60px" src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_image'))}}" alt="">
                         </div>
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_title')}}</h5>
@@ -43,7 +43,7 @@
                 <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
                     <div class="d-flex flex-row">
                         <div class="img-fluid mr-3">
-                            <img src="../assets/img/icon_pattern.svg" alt="">
+                            <img style="height: 60px" src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_image'))}}" alt="">
                         </div>
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_title')}}</h5>
@@ -55,11 +55,11 @@
                 <div class="col-md-6 col-lg-4 py-3 wow fadeInUp">
                     <div class="d-flex flex-row">
                         <div class="img-fluid mr-3">
-                            <img src="../assets/img/icon_pattern.svg" alt="">
+                            <img style="height: 60px" src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_image'))}}" alt="">
                         </div>
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_title')}}</h5>
-                            <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_title')}}</p>
+                            <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_content')}}</p>
                         </div>
                     </div>
                 </div>

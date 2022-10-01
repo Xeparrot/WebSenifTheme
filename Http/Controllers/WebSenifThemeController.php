@@ -97,8 +97,6 @@ class WebSenifThemeController extends Controller
     public function homepage_settings(Request $request)
     {
         $settingPageGenerator = new SettingPageGeneratorBackend('WebSenif Theme Settings','views','https://hellocom.com');
-
-
         $settingPageGenerator->addController(
             'logo',
             true,
@@ -201,7 +199,7 @@ class WebSenifThemeController extends Controller
             'Hero image left side image',
             'Service Sections Blocks',
             'textarea',
-            ThemeSettingService::getSenifThemeSetting('section_block2_content'));
+            ThemeSettingService::getSenifThemeSetting('section_block1_content'));
 
         $settingPageGenerator->addController(
             'section_block1_image',
