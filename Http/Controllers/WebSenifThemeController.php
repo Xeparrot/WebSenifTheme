@@ -142,6 +142,16 @@ class WebSenifThemeController extends Controller
             'text',
             ThemeSettingService::getSenifThemeSetting('hero_link'));
 
+
+        $settingPageGenerator->addController(
+            'hero_video_link',
+            false,
+            'Hero video link',
+            'Hero video view button link',
+            'Hero Section',
+            'text',
+            ThemeSettingService::getSenifThemeSetting('hero_video_link'));
+
         $settingPageGenerator->addController(
           'slider_status',
             true,
@@ -210,6 +220,15 @@ class WebSenifThemeController extends Controller
             'file',
             ThemeSettingService::getSenifThemeSetting('section_block1_image'));
 
+        $settingPageGenerator->addController(
+            'section_block1_link',
+            false,
+            'Section Block 1 Link',
+            'Service block link',
+            'Service Sections Blocks',
+            'text',
+            ThemeSettingService::getSenifThemeSetting('section_block1_link'));
+
 
 
         $settingPageGenerator->addController(
@@ -240,6 +259,15 @@ class WebSenifThemeController extends Controller
             'file',
             ThemeSettingService::getSenifThemeSetting('section_block2_image'));
 
+        $settingPageGenerator->addController(
+            'section_block2_link',
+            false,
+            'Section Block 2 Link',
+            'Service block link',
+            'Service Sections Blocks',
+            'text',
+            ThemeSettingService::getSenifThemeSetting('section_block2_link'));
+
 
         $settingPageGenerator->addController(
             'section_block3_title',
@@ -268,6 +296,15 @@ class WebSenifThemeController extends Controller
             'Service Sections Blocks',
             'file',
             ThemeSettingService::getSenifThemeSetting('section_block3_image'));
+
+        $settingPageGenerator->addController(
+            'section_block3_link',
+            false,
+            'Section Block 3 Link',
+            'Service block link',
+            'Service Sections Blocks',
+            'text',
+            ThemeSettingService::getSenifThemeSetting('section_block3_link'));
 
 
         $settingPageGenerator->renderControllers();

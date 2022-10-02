@@ -11,11 +11,11 @@
                     <p class="text-lg mb-5">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_content')}}</p>
 
                     <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_link')}}" class="btn btn-outline border text-secondary">More Info</a>
-                    <a href="#" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
+                    <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_video_link')}}" class="btn btn-primary btn-split ml-2">Watch Video <div class="fab"><span class="mai-play"></span></div></a>
                 </div>
                 <div class="col-lg-6 py-3 wow zoomIn">
                     <div class="img-place">
-                        <img src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('logo'))}}" alt="">
+                        <img src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('hero_image'))}}" alt="">
                     </div>
                 </div>
             </div>
@@ -36,7 +36,9 @@
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_title')}}</h5>
                             <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_content')}}</p>
+                            <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block1_link')}}" class="btn btn-primary">View</a>
                         </div>
+
                     </div>
                 </div>
 
@@ -48,6 +50,8 @@
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_title')}}</h5>
                             <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_content')}}</p>
+                            <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block2_link')}}" class="btn btn-primary">View</a>
+
                         </div>
                     </div>
                 </div>
@@ -60,6 +64,8 @@
                         <div>
                             <h5>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_title')}}</h5>
                             <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_content')}}</p>
+                            <a href="{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('section_block3_link')}}" class="btn btn-primary">View</a>
+
                         </div>
                     </div>
                 </div>
