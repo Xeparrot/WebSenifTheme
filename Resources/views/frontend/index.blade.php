@@ -73,27 +73,31 @@
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
-    <div class="page-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 py-3 wow zoomIn">
-                    <div class="img-place text-center">
-                        <img src="../assets/img/bg_image_2.png" alt="">
+    @if(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_1_status') == 'Enabled')
+        <div class="page-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 py-3 wow zoomIn">
+                        <div class="img-place text-center">
+                            <img src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_1_image'))}}" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 py-3 wow fadeInRight">
+                        <h2 class="title-section">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_1_title')}}</h2>
+                        <div class="divider"></div>
+                        <p>{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_1_content')}}</p>
+                        <div class="img-place mb-3">
+                            <img height="height: 340px;" src="" alt="">
+                        </div>
+                        <a href="#" class="btn btn-primary">More Details</a>
+                        <a href="#" class="btn btn-outline border ml-2">Success Stories</a>
                     </div>
                 </div>
-                <div class="col-lg-6 py-3 wow fadeInRight">
-                    <h2 class="title-section">We're <span class="marked">Dynamic</span> Team of Creatives People</h2>
-                    <div class="divider"></div>
-                    <p>We provide marketing services to startups & small business to looking for partner for their digital media, design & dev lead generation & communication.</p>
-                    <div class="img-place mb-3">
-                        <img src="../assets/img/testi_image.png" alt="">
-                    </div>
-                    <a href="#" class="btn btn-primary">More Details</a>
-                    <a href="#" class="btn btn-outline border ml-2">Success Stories</a>
-                </div>
-            </div>
-        </div> <!-- .container -->
-    </div> <!-- .page-section -->
+            </div> <!-- .container -->
+        </div> <!-- .page-section -->
+    @endif
+
+
 
     <div class="page-section counter-section">
         <div class="container">
@@ -114,24 +118,26 @@
         </div> <!-- .container -->
     </div> <!-- .page-section -->
 
+    @if(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_2_status') == 'Enabled')
     <div class="page-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 py-3 wow fadeInLeft">
-                    <h2 class="title-section">We're <span class="marked">ready to</span> Serve you with best</h2>
+                    <h2 class="title-section">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_2_title')}}</h2>
                     <div class="divider"></div>
-                    <p class="mb-5">We provide marketing services to startups & small business to looking for partner for their digital media, design & dev lead generation & communication.</p>
+                    <p class="mb-5">{{\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_2_content')}}</p>
                     <a href="#" class="btn btn-primary">More Details</a>
                     <a href="#" class="btn btn-outline ml-2">See pricing</a>
                 </div>
                 <div class="col-lg-6 py-3 wow zoomIn">
                     <div class="img-place text-center">
-                        <img src="../assets/img/bg_image_3.png" alt="">
+                        <img height="height: 340px;" src="{{uploaded_asset(\Modules\WebSenifTheme\Http\Services\ThemeSettingService::getSenifThemeSetting('feature_section_2_image'))}}" alt="">
                     </div>
                 </div>
             </div>
         </div> <!-- .container -->
     </div> <!-- .page-section -->
+    @endif
 
     <div class="page-section">
         <div class="container">

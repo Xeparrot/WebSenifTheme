@@ -306,6 +306,150 @@ class WebSenifThemeController extends Controller
             'text',
             ThemeSettingService::getSenifThemeSetting('section_block3_link'));
 
+        $settingPageGenerator->addController(
+            'feature_section_1_title',
+            false,
+            'Product feature section 1 Title',
+            'Product feature section title',
+            'Feature Section 1',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_1_title'));
+
+        $settingPageGenerator->addController(
+            'feature_section_1_content',
+            false,
+            'Product feature section 1 content',
+            'Product feature section content',
+            'Feature Section 1',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_1_content'));
+
+        $settingPageGenerator->addController(
+            'feature_section_1_image',
+            false,
+            'Product feature section 1 image',
+            'Product feature section image',
+            'Feature Section 1',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('feature_section_1_image'));
+
+        $settingPageGenerator->addController(
+            'feature_section_1_status',
+            true,
+            'Feature Section 1',
+            'Enabled/Disabled hero section',
+            'Feature Section 1',
+            'select',
+            ThemeSettingService::getSenifThemeSetting('feature_section_1_status'),[
+                [
+                    'name' => 'Enabled',
+                    'value' => 'Enabled',
+                ],
+                [
+                    'name' => 'Disabled',
+                    'value' => 'Disabled'
+                ]
+
+            ]
+        );
+
+
+
+        $settingPageGenerator->addController(
+            'feature_section_2_title',
+            false,
+            'Product feature section 2 Title',
+            'Product feature section title',
+            'Feature Section 2',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_2_title'));
+
+        $settingPageGenerator->addController(
+            'feature_section_2_content',
+            false,
+            'Product feature section 2 content',
+            'Product feature section content',
+            'Feature Section 2',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_2_content'));
+
+        $settingPageGenerator->addController(
+            'feature_section_2_image',
+            false,
+            'Product feature section 2 image',
+            'Product feature section image',
+            'Feature Section 2',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('feature_section_2_image'));
+
+        $settingPageGenerator->addController(
+            'feature_section_2_status',
+            true,
+            'Feature Section 2',
+            'Enabled/Disabled hero section',
+            'Feature Section 2',
+            'select',
+            ThemeSettingService::getSenifThemeSetting('feature_section_2_status'),[
+                [
+                    'name' => 'Enabled',
+                    'value' => 'Enabled',
+                ],
+                [
+                    'name' => 'Disabled',
+                    'value' => 'Disabled'
+                ]
+
+            ]
+        );
+
+
+        $settingPageGenerator->addController(
+            'feature_section_3_title',
+            false,
+            'Product feature section 3 Title',
+            'Product feature section title',
+            'Feature Section 3',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_3_title'));
+
+        $settingPageGenerator->addController(
+            'feature_section_3_content',
+            false,
+            'Product feature section 3 content',
+            'Product feature section content',
+            'Feature Section 3',
+            'textarea',
+            ThemeSettingService::getSenifThemeSetting('feature_section_3_content'));
+
+        $settingPageGenerator->addController(
+            'feature_section_3_image',
+            false,
+            'Product feature section 3 image',
+            'Product feature section image',
+            'Feature Section 3',
+            'file',
+            ThemeSettingService::getSenifThemeSetting('feature_section_3_image'));
+
+        $settingPageGenerator->addController(
+            'feature_section_3_status',
+            true,
+            'Feature Section 3',
+            'Enabled/Disabled hero section',
+            'Feature Section 3',
+            'select',
+            ThemeSettingService::getSenifThemeSetting('feature_section_3_status'),[
+                [
+                    'name' => 'Enabled',
+                    'value' => 'Enabled',
+                ],
+                [
+                    'name' => 'Disabled',
+                    'value' => 'Disabled'
+                ]
+
+            ]
+        );
+
 
         $settingPageGenerator->renderControllers();
         $category = $settingPageGenerator->getContent();
